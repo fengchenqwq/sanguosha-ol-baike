@@ -15,8 +15,11 @@
     <div class="home-bg-grain"></div>
   </div>
 
-  <!-- 声音开关 -->
-  <button id="soundToggle" class="sound-btn" type="button" aria-label="开启声音">🔇</button>
+  <!-- 声音控制：开关 + 音量调节 -->
+  <div class="sound-control">
+    <button id="soundToggle" class="sound-btn" type="button" aria-label="开启声音">🔇</button>
+    <input id="volumeSlider" class="volume-slider" type="range" min="0" max="100" value="50" aria-label="音量调节" />
+  </div>
 
   <!-- 右上角功能入口 -->
   <nav class="home-nav">
@@ -41,19 +44,31 @@
     (function () {
       var video = document.getElementById("bgVideo");
       var btn = document.getElementById("soundToggle");
-      if (!video || !btn) return;
-      btn.addEventListener("click", function () {
-        if (video.muted) {
-          video.muted = false;
+      var slider = document.getElementById("volumeSlider");
+      if (!video || !btn || !slider) return;
+
+      video.volume = slider.value / 100; // 默认音量 50%，避免过大
+
+      function setSound(on) {
+        video.muted = !on;
+        btn.textContent = on ? "🔊" : "🔇";
+        btn.classList.toggle("on", on);
+        if (on) {
           var p = video.play();
           if (p && p.catch) p.catch(function () {});
-          btn.textContent = "🔊";
-          btn.classList.add("on");
-        } else {
-          video.muted = true;
-          btn.textContent = "🔇";
-          btn.classList.remove("on");
         }
+      }
+
+      btn.addEventListener("click", function () {
+        if (video.muted && Number(slider.value) > 0) setSound(true);
+        else setSound(false);
+      });
+
+      slider.addEventListener("input", function () {
+        var v = Number(slider.value);
+        video.volume = v / 100;
+        if (v === 0) setSound(false);
+        else if (video.muted) setSound(true);
       });
     })();
   </script>
