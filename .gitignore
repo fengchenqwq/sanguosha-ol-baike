@@ -2,3 +2,6 @@
 .data_src/
 # Claude Code 内部文件
 .claude/
+# Node 依赖与缓存
+node_modules/
+.npm-cache/

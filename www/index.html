@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>三国杀OL百科</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home">
+  <!-- 全屏背景视频 -->
+  <div class="home-bg" aria-hidden="true">
+    <video id="bgVideo" class="bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="home-bg-grain"></div>
+  </div>
+
+  <!-- 顶部导航栏：左上角 logo + 功能菜单 -->
+  <header class="home-header">
+    <a class="home-logo" href="index.html">
+      <img class="home-logo-img" src="assets/logo.png" alt="三国杀OL" />
+      <span class="home-logo-text">三国杀<em class="home-logo-ol">OL</em></span>
+    </a>
+    <nav class="home-menu">
+      <a href="index.html" class="menu-item active">首页</a>
+      <a href="query.html" class="menu-item">武将查询</a>
+      <a href="skill.html" class="menu-item">单技能查询</a>
+    </nav>
+  </header>
+
+  <!-- 声音控制：开关 + 音量调节 -->
+  <div class="sound-control">
+    <button id="soundToggle" class="sound-btn" type="button" aria-label="开启声音">🔇</button>
+    <input id="volumeSlider" class="volume-slider" type="range" min="0" max="100" value="50" aria-label="音量调节" />
+  </div>
+
+  <script>
+    (function () {
+      var video = document.getElementById("bgVideo");
+      var btn = document.getElementById("soundToggle");
+      var slider = document.getElementById("volumeSlider");
+      if (!video || !btn || !slider) return;
+
+      video.volume = slider.value / 100; // 默认音量 50%，避免过大
+
+      function setSound(on) {
+        video.muted = !on;
+        btn.textContent = on ? "🔊" : "🔇";
+        btn.classList.toggle("on", on);
+        if (on) {
+          var p = video.play();
+          if (p && p.catch) p.catch(function () {});
+        }
+      }
+
+      btn.addEventListener("click", function () {
+        if (video.muted && Number(slider.value) > 0) setSound(true);
+        else setSound(false);
+      });
+
+      slider.addEventListener("input", function () {
+        var v = Number(slider.value);
+        video.volume = v / 100;
+        if (v === 0) setSound(false);
+        else if (video.muted) setSound(true);
+      });
+    })();
+  </script>
+</body>
+</html>

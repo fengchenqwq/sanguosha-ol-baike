@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单技能查询 · 三国杀OL百科</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 背景装饰层 -->
+  <div class="bg-wash" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <div class="page">
+    <!-- 返回首页 -->
+    <nav class="back-nav">
+      <a class="back-btn" href="index.html">← 返回首页</a>
+    </nav>
+
+    <!-- 站点头部 -->
+    <header class="site-header">
+      <div class="brand">
+        <h1 class="site-title">单技能<span class="title-ol">查询</span></h1>
+        <p class="site-sub">技能 · 效果 · 拥有武将</p>
+      </div>
+      <div class="seal" aria-hidden="true">技能</div>
+    </header>
+
+    <main>
+      <!-- 搜索区 -->
+      <section class="search-section">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <input
+            id="skillInput"
+            type="text"
+            placeholder="输入技能名，如「仁德」"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <div id="suggestList" class="suggest-list" hidden></div>
+        </div>
+      </section>
+
+      <!-- 技能详情区（由 skill.js 渲染） -->
+      <section id="skillDetail" class="skill-detail-section" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+      <span>技能数据为演示用，具体以《三国杀OL》游戏内实际为准。</span>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="skill.js"></script>
+</body>
+</html>
