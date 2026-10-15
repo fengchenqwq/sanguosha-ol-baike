@@ -31,9 +31,17 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
-function forceClass(force) {
-  const map = { 蜀: "shu", 魏: "wei", 群: "qun", 吴: "wu", 神: "shen", 晋: "jin" };
-  return map[force] || "qun";
+function forceIcon(force) {
+  const map = {
+    魏: "force_wei.png",
+    蜀: "force_shu.png",
+    吴: "force_wu.png",
+    群: "force_qun.png",
+    神: "force_shen.png",
+    晋: "force_jin.png",
+    魔: "force_mo.png",
+  };
+  return map[force] || "force_qun.png";
 }
 
 function versionHp(general, version) {
@@ -170,7 +178,9 @@ function renderDetail(general, activeKey) {
   els.detail.innerHTML = `
     <div class="detail-card">
       <div class="general-head">
-        <div class="force-badge ${forceClass(force)}">${escapeHtml(force)}</div>
+        <div class="force-badge">
+          <img class="force-icon" src="assets/icons/${forceIcon(force)}" alt="${escapeHtml(force)}势力" />
+        </div>
         <div class="general-title-wrap">
           <h2 class="general-name">${escapeHtml(general.name)}</h2>
           <div class="general-meta">
