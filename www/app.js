@@ -259,4 +259,9 @@ document.addEventListener("click", (e) => {
 /* ---------- 初始化 ---------- */
 
 renderHot();
-selectGeneral("诸葛亮");
+// 初始为空态，搜索框默认空，不默认选中武将
+els.detail.innerHTML = `
+  <div class="empty-state">
+    <div class="empty-mark">⚔</div>
+    <p>输入武将名，查询武将技能</p>
+  </div>`;
