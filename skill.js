@@ -189,4 +189,4 @@ document.addEventListener("click", (e) => {
 
 /* ---------- 初始化 ---------- */
 
-selectSkill("仁德");
+renderDetail(""); // 初始为空态，不显示默认技能

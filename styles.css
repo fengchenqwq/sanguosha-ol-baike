@@ -170,7 +170,7 @@ body {
   pointer-events: none;
 }
 
-#searchInput {
+.search-box input {
   width: 100%;
   padding: 18px 20px 18px 54px;
   font-family: var(--font-body);
@@ -184,11 +184,11 @@ body {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-#searchInput::placeholder {
+.search-box input::placeholder {
   color: var(--text-faint);
 }
 
-#searchInput:focus {
+.search-box input:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 1px rgba(201, 164, 92, 0.4), 0 0 26px rgba(201, 164, 92, 0.18);
 }
