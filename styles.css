@@ -85,9 +85,63 @@ body {
 .page {
   position: relative;
   z-index: 1;
+  flex: 1;
+  min-width: 0;
   max-width: 880px;
   margin: 0 auto;
-  padding: 56px 28px 40px;
+  padding: 40px 28px 40px;
+}
+
+/* ---------- 顶部横幅海报 ---------- */
+
+.hero-banner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 20px 20px 0;
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  max-width: 536px;
+  height: auto;
+  margin: 0 auto;
+  border: var(--border-gold);
+  border-radius: 8px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55), 0 0 34px rgba(201, 164, 92, 0.16);
+}
+
+/* ---------- 主布局 ---------- */
+
+.layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 28px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+  align-items: flex-start;
+}
+
+/* ---------- 左侧竖版海报 ---------- */
+
+.side-poster {
+  position: sticky;
+  top: 24px;
+  flex: 0 0 190px;
+  padding-top: 40px;
+}
+
+.side-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border-gold);
+  border-radius: 8px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55), 0 0 34px rgba(201, 164, 92, 0.16);
 }
 
 /* ---------- 站点头部 ---------- */
@@ -614,6 +668,12 @@ body {
 }
 
 /* ---------- 响应式 ---------- */
+
+@media (max-width: 1100px) {
+  .side-poster {
+    display: none;
+  }
+}
 
 @media (max-width: 640px) {
   .page {
