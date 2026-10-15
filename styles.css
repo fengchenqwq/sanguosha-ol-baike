@@ -754,6 +754,8 @@ body.home {
   top: 28px;
   right: 36px;
   z-index: 10;
+  display: flex;
+  gap: 12px;
 }
 
 .nav-btn {
@@ -851,4 +853,83 @@ body.home {
     top: 18px;
     right: 18px;
   }
+}
+
+/* ---------- 单技能查询 ---------- */
+
+.skill-detail-section {
+  min-height: 320px;
+}
+
+.skill-title-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.18);
+  margin-bottom: 8px;
+}
+
+.skill-title-name {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background: linear-gradient(180deg, #f3e2b3 0%, #d4b06a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.skill-owner-count {
+  margin-left: auto;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.skill-desc-block {
+  padding: 18px 0;
+  border-bottom: 1px dashed rgba(201, 164, 92, 0.16);
+  opacity: 0;
+  animation: skillIn 0.5s ease forwards;
+}
+
+.skill-desc-block:last-child {
+  border-bottom: none;
+}
+
+.skill-desc {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.skill-owners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.skill-owners-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--text-faint);
+}
+
+.owner-chip {
+  display: inline-block;
+  padding: 6px 14px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: var(--gold-bright);
+  border: 1px solid rgba(201, 164, 92, 0.35);
+  border-radius: 4px;
+  background: rgba(201, 164, 92, 0.06);
 }
