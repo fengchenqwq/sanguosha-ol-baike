@@ -818,37 +818,11 @@ body.home {
   pointer-events: auto;
 }
 
-.home-logo-seal {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 24px;
-  color: #f4ecd6;
-  background: linear-gradient(180deg, #d04a38, var(--cinnabar));
-  border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.home-logo-text {
-  font-family: var(--font-display);
-  font-size: 30px;
-  letter-spacing: 3px;
-  background: linear-gradient(180deg, #f6e5b6, #d9b877);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.home-logo-ol {
-  font-style: normal;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-left: 2px;
-  color: var(--cinnabar-bright);
-  -webkit-text-fill-color: var(--cinnabar-bright);
+.home-logo-img {
+  display: block;
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 .home-menu {
@@ -886,18 +860,8 @@ body.home {
     padding: 12px 16px;
   }
 
-  .home-logo-text {
-    font-size: 22px;
-  }
-
-  .home-logo-seal {
-    width: 34px;
+  .home-logo-img {
     height: 34px;
-    font-size: 19px;
-  }
-
-  .home-logo-ol {
-    font-size: 15px;
   }
 
   .menu-item {
