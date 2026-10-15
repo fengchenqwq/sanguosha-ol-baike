@@ -7,12 +7,16 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="home">
-  <!-- 全屏动画背景（占位：三国杀动画素材待加入，替换这里的占位内容即可） -->
+  <!-- 全屏背景视频 -->
   <div class="home-bg" aria-hidden="true">
-    <div class="home-bg-wash"></div>
+    <video id="bgVideo" class="bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/bg.mp4" type="video/mp4" />
+    </video>
     <div class="home-bg-grain"></div>
-    <div class="home-bg-hint">三国杀动画区域</div>
   </div>
+
+  <!-- 声音开关 -->
+  <button id="soundToggle" class="sound-btn" type="button" aria-label="开启声音">🔇</button>
 
   <!-- 右上角功能入口 -->
   <nav class="home-nav">
@@ -27,5 +31,27 @@
     <h1 class="home-title">三国杀<span class="home-ol">OL</span>百科</h1>
     <p class="home-sub">武将 · 版本 · 技能 · 模式推荐</p>
   </div>
+
+  <script>
+    // 背景视频声音开关：浏览器限制带声音自动播放，故默认静音自动播放，点击按钮开启声音
+    (function () {
+      var video = document.getElementById("bgVideo");
+      var btn = document.getElementById("soundToggle");
+      if (!video || !btn) return;
+      btn.addEventListener("click", function () {
+        if (video.muted) {
+          video.muted = false;
+          var p = video.play();
+          if (p && p.catch) p.catch(function () {});
+          btn.textContent = "🔊";
+          btn.classList.add("on");
+        } else {
+          video.muted = true;
+          btn.textContent = "🔇";
+          btn.classList.remove("on");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

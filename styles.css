@@ -709,20 +709,16 @@ body.home {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background:
-    radial-gradient(1200px 700px at 50% 20%, rgba(122, 90, 134, 0.14), transparent 60%),
-    radial-gradient(900px 600px at 15% 85%, rgba(192, 57, 43, 0.10), transparent 55%),
-    linear-gradient(180deg, var(--ink-2), var(--ink) 55%, var(--ink-2));
+  background: linear-gradient(180deg, var(--ink-2), var(--ink));
   overflow: hidden;
-  /* 三国杀动画素材将放入此容器（视频/图片序列等），替换占位内容即可 */
 }
 
-.home-bg-wash {
+.bg-video {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(60% 40% at 50% 30%, rgba(201, 164, 92, 0.08), transparent 70%),
-    radial-gradient(45% 35% at 20% 70%, rgba(201, 164, 92, 0.05), transparent 70%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home-bg-grain {
@@ -732,17 +728,28 @@ body.home {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
-.home-bg-hint {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-display);
-  font-size: 15px;
-  letter-spacing: 4px;
-  color: var(--text-faint);
-  pointer-events: none;
-  user-select: none;
+.sound-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 20;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--gold-bright);
+  background: rgba(22, 17, 12, 0.55);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
+}
+
+.sound-btn:hover {
+  background: rgba(201, 164, 92, 0.2);
+  box-shadow: 0 0 16px rgba(201, 164, 92, 0.35);
 }
 
 .home-nav {
