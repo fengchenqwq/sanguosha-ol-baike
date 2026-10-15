@@ -15,32 +15,26 @@
     <div class="home-bg-grain"></div>
   </div>
 
+  <!-- 顶部导航栏：左上角 logo + 功能菜单 -->
+  <header class="home-header">
+    <a class="home-logo" href="index.html">
+      <span class="home-logo-seal" aria-hidden="true">杀</span>
+      <span class="home-logo-text">三国杀<em class="home-logo-ol">OL</em></span>
+    </a>
+    <nav class="home-menu">
+      <a href="index.html" class="menu-item active">首页</a>
+      <a href="query.html" class="menu-item">武将查询</a>
+      <a href="skill.html" class="menu-item">单技能查询</a>
+    </nav>
+  </header>
+
   <!-- 声音控制：开关 + 音量调节 -->
   <div class="sound-control">
     <button id="soundToggle" class="sound-btn" type="button" aria-label="开启声音">🔇</button>
     <input id="volumeSlider" class="volume-slider" type="range" min="0" max="100" value="50" aria-label="音量调节" />
   </div>
 
-  <!-- 右上角功能入口 -->
-  <nav class="home-nav">
-    <a class="nav-btn" href="skill.html">
-      <span class="nav-btn-icon">✦</span>
-      <span>单技能查询</span>
-    </a>
-    <a class="nav-btn" href="query.html">
-      <span class="nav-btn-icon">⚔</span>
-      <span>武将查询</span>
-    </a>
-  </nav>
-
-  <!-- 居中品牌 -->
-  <div class="home-brand">
-    <h1 class="home-title">三国杀<span class="home-ol">OL</span>百科</h1>
-    <p class="home-sub">武将 · 版本 · 技能 · 模式推荐</p>
-  </div>
-
   <script>
-    // 背景视频声音开关：浏览器限制带声音自动播放，故默认静音自动播放，点击按钮开启声音
     (function () {
       var video = document.getElementById("bgVideo");
       var btn = document.getElementById("soundToggle");
