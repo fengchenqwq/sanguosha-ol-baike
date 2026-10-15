@@ -1,0 +1,4 @@
+# 数据源与爬虫中间文件（含密钥、原始 wikitext，不提交）
+.data_src/
+# Claude Code 内部文件
+.claude/
