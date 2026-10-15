@@ -164,7 +164,10 @@ function renderDetail(general, activeKey) {
             <span class="meta-sep">·</span>
             <span>${escapeHtml(general.gender)}</span>
             <span class="meta-sep">·</span>
-            <span class="hp-dots">${'<i class="hp-dot"></i>'.repeat(hp)}</span>
+            <span class="hp-wrap">
+              <span class="hp-dots">${'<i class="hp-jade"></i>'.repeat(hp)}</span>
+              <span class="hp-label">体力上限${hp}</span>
+            </span>
           </div>
         </div>
       </div>
