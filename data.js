@@ -1158,7 +1158,7 @@ window.SGS_DATA = [
         "tag": "谋",
         "name": "谋",
         "force": "魏",
-        "hp": 4,
+        "hp": 5,
         "skills": [
           {
             "owner": "谋邓艾",
@@ -4692,14 +4692,14 @@ window.SGS_DATA = [
     "name": "族钟会",
     "force": "魏",
     "gender": "男",
-    "hp": 3,
+    "hp": 4,
     "versions": [
       {
         "key": "标_族钟会",
         "tag": "标",
         "name": "标准版",
         "force": "魏",
-        "hp": 3,
+        "hp": 4,
         "skills": [
           {
             "owner": "族钟会",
@@ -10366,7 +10366,7 @@ window.SGS_DATA = [
         "tag": "界",
         "name": "界限突破",
         "force": "吴",
-        "hp": 4,
+        "hp": 5,
         "skills": [
           {
             "owner": "界孙坚",
@@ -10391,7 +10391,7 @@ window.SGS_DATA = [
         "tag": "谋",
         "name": "谋",
         "force": "吴",
-        "hp": 4,
+        "hp": 5,
         "skills": [
           {
             "owner": "谋孙坚",
@@ -12920,14 +12920,14 @@ window.SGS_DATA = [
     "name": "董翓",
     "force": "群",
     "gender": "女",
-    "hp": 3,
+    "hp": 5,
     "versions": [
       {
         "key": "标_董翓",
         "tag": "标",
         "name": "标准版",
         "force": "群",
-        "hp": 3,
+        "hp": 5,
         "skills": [
           {
             "owner": "董翓",
@@ -14377,7 +14377,7 @@ window.SGS_DATA = [
         "tag": "界",
         "name": "界限突破",
         "force": "群",
-        "hp": 2,
+        "hp": 3,
         "skills": [
           {
             "owner": "界沮授",
@@ -14500,14 +14500,14 @@ window.SGS_DATA = [
     "name": "李傕",
     "force": "群",
     "gender": "男",
-    "hp": 4,
+    "hp": 6,
     "versions": [
       {
         "key": "标_李傕",
         "tag": "标",
         "name": "标准版",
         "force": "群",
-        "hp": 4,
+        "hp": 6,
         "skills": [
           {
             "owner": "李傕",
@@ -15138,7 +15138,7 @@ window.SGS_DATA = [
         "tag": "谋",
         "name": "谋",
         "force": "群",
-        "hp": 3,
+        "hp": 4,
         "skills": [
           {
             "owner": "谋卢植",
@@ -15320,14 +15320,14 @@ window.SGS_DATA = [
     "name": "马日磾",
     "force": "群",
     "gender": "男",
-    "hp": 4,
+    "hp": 6,
     "versions": [
       {
         "key": "标_马日磾",
         "tag": "标",
         "name": "标准版",
         "force": "群",
-        "hp": 4,
+        "hp": 6,
         "skills": [
           {
             "owner": "马日磾",
@@ -17800,14 +17800,14 @@ window.SGS_DATA = [
     "name": "族韩馥",
     "force": "群",
     "gender": "男",
-    "hp": 3,
+    "hp": 4,
     "versions": [
       {
         "key": "标_族韩馥",
         "tag": "标",
         "name": "标准版",
         "force": "群",
-        "hp": 3,
+        "hp": 4,
         "skills": [
           {
             "owner": "族韩馥",
@@ -18573,14 +18573,14 @@ window.SGS_DATA = [
     "name": "神甘宁",
     "force": "神",
     "gender": "男",
-    "hp": 3,
+    "hp": 6,
     "versions": [
       {
         "key": "神_神甘宁",
         "tag": "神",
         "name": "神",
         "force": "神",
-        "hp": 3,
+        "hp": 6,
         "skills": [
           {
             "owner": "神甘宁",
@@ -19623,14 +19623,14 @@ window.SGS_DATA = [
     "name": "司马师",
     "force": "晋",
     "gender": "男",
-    "hp": 3,
+    "hp": 4,
     "versions": [
       {
         "key": "标_司马师",
         "tag": "标",
         "name": "标准版",
         "force": "晋",
-        "hp": 3,
+        "hp": 4,
         "skills": [
           {
             "owner": "司马师",
