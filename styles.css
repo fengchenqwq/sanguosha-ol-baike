@@ -409,11 +409,19 @@ body {
 }
 
 .hp-jade {
-  width: 11px;
+  width: 14px;
   height: 16px;
-  background: radial-gradient(circle at 45% 58%, #ff9a82, var(--cinnabar) 75%);
-  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-  box-shadow: 0 0 7px rgba(192, 57, 43, 0.55);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28'%3E%3Cpath d='M14 2 C19 4 23 10 22 16 C21 22 15 27 9 26 C3 25 1 19 3 14 C5 8 9 3 14 2Z' fill='%23c0392b'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 0 3px rgba(192, 57, 43, 0.55));
+}
+
+.hp-jade.hollow {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28'%3E%3Cpath d='M14 2 C19 4 23 10 22 16 C21 22 15 27 9 26 C3 25 1 19 3 14 C5 8 9 3 14 2Z' fill='none' stroke='%238a7a5a' stroke-width='1.8'/%3E%3C/svg%3E");
+  filter: none;
+  opacity: 0.85;
 }
 
 .hp-label {

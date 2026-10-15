@@ -40,6 +40,20 @@ function versionHp(general, version) {
   return version.hp || general.hp;
 }
 
+function hpHtml(hp) {
+  // 体力上限 > 6：直接用数字显示
+  if (hp > 6) {
+    return `<span class="hp-label hp-label-num">体力上限${hp}</span>`;
+  }
+  // 体力上限 6：3 实心 + 3 空心勾玉
+  const solid = hp === 6 ? 3 : hp;
+  const hollow = hp === 6 ? 3 : 0;
+  const jades =
+    '<i class="hp-jade"></i>'.repeat(solid) +
+    '<i class="hp-jade hollow"></i>'.repeat(hollow);
+  return `<span class="hp-dots">${jades}</span><span class="hp-label">体力上限${hp}</span>`;
+}
+
 /* ---------- 热门标签 ---------- */
 
 function renderHot() {
@@ -164,10 +178,7 @@ function renderDetail(general, activeKey) {
             <span class="meta-sep">·</span>
             <span>${escapeHtml(general.gender)}</span>
             <span class="meta-sep">·</span>
-            <span class="hp-wrap">
-              <span class="hp-dots">${'<i class="hp-jade"></i>'.repeat(hp)}</span>
-              <span class="hp-label">体力上限${hp}</span>
-            </span>
+            <span class="hp-wrap">${hpHtml(hp)}</span>
           </div>
         </div>
       </div>
