@@ -3,70 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>三国杀OL百科 · 武将技能查询</title>
+  <title>三国杀OL百科</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <!-- 背景装饰层 -->
-  <div class="bg-wash" aria-hidden="true"></div>
-  <div class="bg-grain" aria-hidden="true"></div>
-
-  <!-- 顶部横幅海报 -->
-  <div class="hero-banner">
-    <img src="assets/poster-h.png" alt="三国杀经典武将海报" />
+<body class="home">
+  <!-- 全屏动画背景（占位：三国杀动画素材待加入，替换这里的占位内容即可） -->
+  <div class="home-bg" aria-hidden="true">
+    <div class="home-bg-wash"></div>
+    <div class="home-bg-grain"></div>
+    <div class="home-bg-hint">三国杀动画区域</div>
   </div>
 
-  <div class="layout">
-    <!-- 左侧竖版武将海报 -->
-    <aside class="side-poster" aria-hidden="true">
-      <img src="assets/poster-v.png" alt="三国杀武将海报" />
-    </aside>
+  <!-- 右上角功能入口 -->
+  <nav class="home-nav">
+    <a class="nav-btn" href="query.html">
+      <span class="nav-btn-icon">⚔</span>
+      <span>武将查询</span>
+    </a>
+  </nav>
 
-    <div class="page">
-      <!-- 站点头部 -->
-    <header class="site-header">
-      <div class="brand">
-        <h1 class="site-title">三国杀<span class="title-ol">OL</span>百科</h1>
-        <p class="site-sub">武将 · 版本 · 技能 · 模式推荐</p>
-      </div>
-      <div class="seal" aria-hidden="true">百科</div>
-    </header>
-
-    <main>
-      <!-- 搜索区 -->
-      <section class="search-section">
-        <div class="search-box">
-          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6" />
-            <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-          </svg>
-          <input
-            id="searchInput"
-            type="text"
-            placeholder="输入武将名，如「诸葛亮」"
-            autocomplete="off"
-            spellcheck="false"
-          />
-          <div id="suggestList" class="suggest-list" hidden></div>
-        </div>
-
-        <div id="hotTags" class="hot-tags">
-          <span class="hot-label">热门</span>
-          <!-- 热门标签由 app.js 渲染 -->
-        </div>
-      </section>
-
-      <!-- 武将详情区（由 app.js 渲染） -->
-      <section id="detailSection" class="detail-section" aria-live="polite"></section>
-    </main>
-
-    <footer class="site-footer">
-      <span>武将技能数据为演示用，具体以《三国杀OL》游戏内实际为准。</span>
-    </footer>
-    </div>
+  <!-- 居中品牌 -->
+  <div class="home-brand">
+    <h1 class="home-title">三国杀<span class="home-ol">OL</span>百科</h1>
+    <p class="home-sub">武将 · 版本 · 技能 · 模式推荐</p>
   </div>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
 </body>
 </html>
